@@ -1,0 +1,63 @@
+#clock{
+    width: 300px;
+    height: 300px;
+    background-image: url(/images/clock.jpg);
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    /* filter: blur(10px); */
+    /* filter: brightness(200%); */ 
+    /* filter:contrast(50%) ; */
+    /* filter: grayscale(100%); */
+    /* filter: hue-rotate(180%); */
+    filter:invert(90%)
+}
+#seconds{
+    width: 5px;
+    height:80px;
+    background: green;
+    margin-top:60px;
+    margin-left:150px;
+    transform: rotate(0deg);
+    animation-name: clock;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center bottom;
+    position: absolute;
+}
+#minutes{
+    width:3px;
+    height: 60px;
+    background: yellow;
+    margin-top: 80px;
+    margin-left: 150px;
+    transform: rotate(0deg);
+    animation-name: clock;
+    animation-duration: 3600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center bottom;
+    position: absolute;
+}
+#hours{
+    width: 1px;
+    height: 30px;
+    background: red;
+    margin-top: 110px;
+    margin-left: 150px;
+    transform: rotate(0deg);
+    animation-name: clock;
+    animation-duration: 86400s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center bottom;
+    position: absolute;
+}
+@keyframes clock{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+#seconds:hover{
+    animation-play-state: paused;
+}
